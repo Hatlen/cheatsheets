@@ -1,0 +1,3 @@
+Gnome virtual filessystem
+gvfs-mount sftp||ftp||smb.. to mount to
+$HOME/.gvfs
