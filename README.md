@@ -1,4 +1,4 @@
 cheatsheets
 ===========
 
-Some cheatsheets, command and stuff that i would like to remeber
+Some cheatsheets, commands and stuff that i like to remember.
