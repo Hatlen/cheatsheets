@@ -1,0 +1,20 @@
+" only on mac
+if system('uname') =~ 'Darwin'
+endif
+
+
+
+" Command bindings does not work in terminal, just in macvim/gvim
+" "*y and "*p does not work in vim inside tmux
+au == autocmd, function == fu[n[c[t[i[o[n]]]]], eg.
+
+events
+WinEnter, BufWinEnter, CursorHold, BufWrite(Post||Pre), BufRead,BufNewFile
+
+" good way to setf (set filetype):
+au BufRead, BufNewFile <filetype regexp eg: *.rb> <action eg: set ft=ruby>
+
+" and to set specific options for a filetype do
+au FileType ruby set expandtab tabstop=2 softtabstop=2 shiftwidth=2
+
+

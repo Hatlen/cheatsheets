@@ -1,11 +1,59 @@
-Gnome virtual filessystem
+# Gnome virtual filessystem on linux
 gvfs-mount sftp||ftp||smb.. to mount to
 $HOME/.gvfs
 
-Users and stuff (some specific to ubuntu instances on ec2)
-sudo passwd ubuntu #set the defaults users password
-man sudo_port	# good manual about users and rights 
-				# etc on the ec2 ubuntu instance
-sudo adduser <user> admin # the admin group has lots of privilegies
-visudo # change which users/groups that have sudo rights
-$HOME/.ssh/autheti..keys.. # which keys should have access to the machine
+## Users and stuff (some specific to ubuntu instances on ec2)
+#set the defaults users password on a ubuntu ec2 instance
+sudo passwd ubuntu
+
+# good manual about users and rights
+# etc on the ec2 ubuntu instance
+man sudo_port	
+
+# the admin group has lots of privilegies
+sudo adduser <user> admin
+
+# change which users/groups that have sudo rights
+visudo
+
+# which keys should have access to the machine 
+$HOME/.ssh/authorized_keys
+
+## Rvm installation on Ubuntu server 12.01 1 lts
+## This thread on stackoverflow was helpful 
+## http://stackoverflow.com/questions/9056008/
+apt-get update
+
+sudo apt-get --purge remove ruby-rvm &&
+sudo rm -rf /usr/share/ruby-rvm /etc/rvmrc /etc/profile.d/rvm.sh &&
+curl -L get.rvm.io | bash -s -- --auto-dotfiles &&
+# Execute the rvm loader script in .bash_profile
+# (reminder if .bash_profile is present at login/shell opening .profile aint loaded)
+source .bash_profile
+
+# Requirements that should be installed according to rvm requirements
+sudo apt-get install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion pkg-config
+
+# Extra requirements for rails
+sudo apt-get install nodejs
+
+# 1.8.7 has to be installed before 1.9.3
+rvm install 1.8.7 &&
+rvm install 1.9.3 &&
+rvm use 1.9.3 --default
+
+## Run railsapps
+# install dependencies
+bundle install
+
+# run rails server
+rvmsudo rails s -e production -p80 [-d]
+
+
+## Extra stuff for nginx and unicorn
+# Goog blogpost here
+http://linuxmoz.com/ubuntu-12-04-how-to-install-ruby-on-rails-nginx-unicorn/
+
+
+
+

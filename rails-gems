@@ -1,0 +1,30 @@
+# Haml as templating language (no need for changing template language in
+# application.rb
+gem 'haml-rails'
+
+
+group :development do
+	# View the rails console/logs in the browser with
+	# the chrome plugin rails panel
+	gem 'meta_request'
+
+	# Use pry as the console
+	gem 'pry'
+	gem 'pry-rails'
+	# Creates better error pages, with stacktraces and stuff
+	gem 'better_error'
+	# This adds an instant REPL to the better error pages
+	gem 'binding_of_caller'
+end
+
+group :production do
+	# better server
+	gem 'unicorn'
+end
+
+# Create javascript templates with a haml/coffeescript markup style
+group :assets do
+  gem 'haml_coffee_assets'
+  gem 'execjs'
+end
+
