@@ -11,8 +11,10 @@ group :development do
 	# Use pry as the console
 	gem 'pry'
 	gem 'pry-rails'
+
 	# Creates better error pages, with stacktraces and stuff
-	gem 'better_error'
+	gem 'better_errors'
+
 	# This adds an instant REPL to the better error pages
 	gem 'binding_of_caller'
 end
