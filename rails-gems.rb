@@ -2,7 +2,6 @@
 # application.rb
 gem 'haml-rails'
 
-
 group :development do
 	# View the rails console/logs in the browser with
 	# the chrome plugin rails panel
@@ -29,4 +28,21 @@ group :assets do
   gem 'haml_coffee_assets'
   gem 'execjs'
 end
+
+
+group :test do
+  gem 'rspec-rails'
+
+  gem 'guard'
+  gem 'guard-livereload'
+  gem 'guard-rspec'
+
+end
+
+#Faster rails loading gems, boot-and-fork gems
+#these could be installed from outside of bundler
+#for faster boot times.
+gem 'zeus'
+# to start faster, instal this gem 'natively'
+gem 'spork'
 
