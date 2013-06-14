@@ -1,6 +1,7 @@
 # Haml as templating language (no need for changing template language in
 # application.rb
 gem 'haml-rails'
+gem 'strong-parameters'
 
 group :development do
 	# View the rails console/logs in the browser with
@@ -43,6 +44,5 @@ end
 #these could be installed from outside of bundler
 #for faster boot times.
 gem 'zeus'
-# to start faster, instal this gem 'natively'
+# or
 gem 'spork'
-

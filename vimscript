@@ -17,4 +17,8 @@ au BufRead, BufNewFile <filetype regexp eg: *.rb> <action eg: set ft=ruby>
 " and to set specific options for a filetype do
 au FileType ruby set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 
-
+" Settings effecting the indenting
+"set noexpandtab
+"set softtabstop=4
+"set tabstop=4
+"set shiftwidth=4

@@ -1,0 +1,2 @@
+# start server
+rvmsudo unicorn_rails -c config/unicorn.rb -D

@@ -1,0 +1,26 @@
+#great apps
+django_extensions
+# depends on something like werkzoug 
+play_dough # a project by mozilla with better safety in mind etc
+
+# good recipies for creating django machines
+http://github.com/maigfrga/chef-django-ubuntu
+https://github.com/esacteksab/salt-states
+
+#restful api apps
+django-rest-framework
+tasty-pie
+
+#social-auth
+django-social-auth
+django-all-auth
+
+
+#Task queus
+celery
+django-celery
+
+#testing
+nose
+django.test.client
+testacular
